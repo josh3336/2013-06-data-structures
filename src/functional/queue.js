@@ -1,19 +1,25 @@
-var makeQueue = function(){
-  // Use an object with numeric keys to store values
-  var storage = {};
-
-  var size; // Hint: set an initial value here
-
-  // Implement the methods below
-  var queue = {};
-
-  queue.enqueue = function(value){
+var MakeQueue= function(){
+  queue={};
+  queue.storage=[];
+  queue.add = function(val){
+    queue.storage.push(val);
+  };
+  queue.remove = function(){
+    return queue.storage.shift();
   };
 
-  queue.dequeue = function(){
-  };
+  return queue;
+};
 
-  queue.size = function(){
+
+var MakeQueue= function(){
+  queue={};
+  storage=[];
+  queue.add = function(val){
+    storage.push(val);
+  };
+  queue.remove = function(){
+    return storage.shift();
   };
 
   return queue;
