@@ -1,14 +1,15 @@
-var MakeStack = function (){
-  stack={};
-  stack.storage=[];
+var makeStack = function(){
+  var storage=[];
+  var stack={};
 
-  stack.add = function (value){
-    this.storage.push(value);
-  };
-  stack.remove = function(){
-    return this.storage.pop();
+  stack.add= function(val){
+    storage.push(val);
   };
 
+
+  stack.remove= function(val){
+    return storage.pop();
+  };
 
   return stack;
 };
